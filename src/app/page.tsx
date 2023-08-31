@@ -1,14 +1,9 @@
 "use client" 
 import { useState } from 'react'
-import Login from './login/page';
+import Login from './Login/page';
 import SignUP from './Signup/page';
 
 export default function Home() {
-  const [count, setCount] = useState(0);
-  
-  function handleClick() {
-    setCount(count + 1)
-  }
   function onclick() {
     setisloggedin(true);
   }
@@ -16,11 +11,6 @@ export default function Home() {
   return (
     
     <main className="">
-      {/* <button onClick={handleClick}>
-        clicked {count} times
-      </button>
-      
-      <p>home page</p> */}
       <button onClick={onclick}>
         turn the page to {isloggedin ? 'login' : 'signup'}
       </button>

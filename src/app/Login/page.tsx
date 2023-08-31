@@ -6,15 +6,16 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
 
-const SignUP = () => {
+const Login = () => {
+  
+  
   const [user, setUser] = React.useState({
     username: "",
     email: "",
     password: "",
-    password_confirmation: "",
   });
   
-  const onSignup = async () => {
+  const onLogin = async () => {
   }
   return (
     <div className="flex flex-col justify-center items-center bg-blue-400 text-black min-h-screen py-2">
@@ -49,23 +50,14 @@ const SignUP = () => {
       onChange={(e) => setUser({...user, password: e.target.value})}
       placeholder='Password'
       />
-      <label htmlFor="password_confirmation">Confirm Password</label>
-      <input 
-      type="text" 
-      id='password_confirmation'
-      className="border-2 border-black rounded-md p-2 m-2"
-      value={user.password_confirmation}
-      onChange={(e) => setUser({...user, password_confirmation: e.target.value})}
-      placeholder='Confirm Password'
-      />
-      <button onClick={onSignup}
+      <button onClick={onLogin}
       className='border-2 border-black rounded-md p-2 m-2 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent'
       >
         Sign Up
       </button>
-      <Link href="/Login">Create your Account {`>`} </Link>
+      <Link href="/Signup">Create your Account {`>`} </Link>
     </div>
   );
 }
 
-export default SignUP;
+export default Login;
